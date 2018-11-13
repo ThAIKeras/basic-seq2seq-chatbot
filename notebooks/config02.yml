@@ -1,0 +1,17 @@
+model: basic_seq2seq
+params:
+    sequence:
+        max_len: 15
+        start_token: <start>
+        kept_symbols: '!,.?'
+    tokenizer:
+        num_words: null
+        oov_token: null
+        lower: false
+        filters: '"#$%&()*+-/:;=@[\]^_`{|}~ '
+    model:
+        embedding_dim: 300
+        state_dim: 512
+    training:
+        batch_size: 128
+        epochs: 100
